@@ -2,29 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Pesquisa IBGE</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="container">
-        <div class="form_box">
-            <h2 class="title">Envie sua mensagem</h2>
+    <div class="principal">
+        <h1>Pesquisa IBGE</h1>
+        <form>
+        <div class="cadastro">
+            <fieldset>
+                <legend>Cadastro</legend>
+            
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <br><br>
 
-            <form action="" method="get">
-                <input type="text" name="name" placeholder="Seu nome">
-                <input type="email" name="email" placeholder="Seu endereço e-mail" >
-                <input type="text" name="subject" placeholder="Assunto">
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+                </select>
+                <br><br>
 
-                <textarea name="message" placeholder="Digite sua mensagem"></textarea>
+                <label for="data_nasc"> Data de nascimento:</label>
+                <input type="date" id="data_nasc" nam="data_nasc">
+                <br><br>
 
-                <button type="submit">Enviar Mensagem</button>
-            </form>
+                <label for="whats">WhatsApp:</label>
+                <input type="text" id="whats" name="whats" required>
+                <br>
+ 
+            </fieldset>
+            <br><br>
         </div>
-    </div>
 
+            
+        <div class="pergunta">
+            <fieldset>
+                <legend>Perguntas</legend>
+
+                
+                    <p>Qual sua renda salarial?</p>
+                    <label><input type="radio" name="q1" value="A"> 1500 a 3000</label><br>
+                    <label><input type="radio" name="q1" value="B"> 3000 a 5000</label><br>
+                    <label><input type="radio" name="q1" value="C"> 5000 a 7000</label><br>
+                    <label><input type="radio" name="q1" value="D"> 7000 ou +</label>
+                    <br><br>
+
+                    <p>Quantas pessoas vivem na sua residência?</p>
+                    <label><input type="radio" name="q2" value="A"> Somente eu</label><br>
+                    <label><input type="radio" name="q2" value="B"> 2 a 5</label><br>
+                    <label><input type="radio" name="q2" value="C"> 5 ou +</label>
+                    <br><br>
+
+                    <p>Há geladeira na sua casa? Se sim, quantas?</p>
+                    <label><input type="radio" name="q3" value="A"> Não tenho nenhuma geladeira</label><br>
+                    <label><input type="radio" name="q3" value="B"> 1 ou 2 </label><br>
+                    <label><input type="radio" name="q3" value="C"> 2 ou +</label>
+                    <br><br>
+
+                    <p>Há televisão na sua casa? Se sim, quantas?</p>
+                    <label><input type="radio" name="q4" value="A"> Não tenho nenhuma televisão</label><br>
+                    <label><input type="radio" name="q4" value="B"> 1 ou 2</label><br>
+                    <label><input type="radio" name="q4" value="C"> 2 ou +</label>
+                    <br>
+            </fieldset>
+        </div>
+        
+        <input type="submit" value="submit">
+        </form>
+    </div>
 </body>
 </html>
